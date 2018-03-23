@@ -33,9 +33,6 @@ class UserController extends Base
             ->bind('ornito.create')
             ->before(array($this, 'before'));
 
-        $ctr->get('/template', [$this, 'createUser'])
-            ->bind('ornito.get'); // route name, must be unique(!)
-
         return $ctr;
     }
 
