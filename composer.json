@@ -1,5 +1,6 @@
 {
-    "name": "bolt/bolt-extension-starter-extended",
+    "name": "ornito/rest-create-users",
+    "version": "0.0.1",
     "description": "Create users in Bolt CMS through API.",
     "type": "bolt-extension",
     "keywords": [
@@ -28,7 +29,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Bolt\\Extension\\Ornito\\RestCreateUser": "src"
+            "Bolt\\Extension\\Ornito\\RestCreateUser\\": "src"
         }
     },
     "extra": {

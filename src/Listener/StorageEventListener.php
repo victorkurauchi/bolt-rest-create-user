@@ -1,6 +1,6 @@
 <?php
 
-namespace Bolt\Extension\YourName\ExtensionName\Listener;
+namespace Bolt\Extension\Ornito\RestCreateUser\Listener;
 
 use Bolt\Events\StorageEvent;
 use Silex\Application;

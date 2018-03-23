@@ -8,8 +8,8 @@ use Bolt\Controller\Zone;
 use Bolt\Events\StorageEvent;
 use Bolt\Events\StorageEvents;
 use Bolt\Extension\SimpleExtension;
-use Bolt\Extension\YourName\ExtensionName\Controller\ExampleController;
-use Bolt\Extension\YourName\ExtensionName\Listener\StorageEventListener;
+use Bolt\Extension\Ornito\RestCreateUser\Controller\UserController;
+use Bolt\Extension\Ornito\RestCreateUser\Listener\StorageEventListener;
 use Bolt\Menu\MenuEntry;
 use Silex\Application;
 use Silex\ControllerCollection;
@@ -17,6 +17,7 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Markup;
+// use Bolt\Extension\StorageTrait;
 
 /**
  * ExtensionName extension class.
@@ -25,6 +26,8 @@ use Twig\Markup;
  */
 class RestCreateUserExtension extends SimpleExtension
 {
+    // use StorageTrait;
+
     /**
      * {@inheritdoc}
      */
@@ -43,7 +46,7 @@ class RestCreateUserExtension extends SimpleExtension
          */
 
         return [
-            new Field\ExampleField(),
+            // new Field\ExampleField(),
         ];
     }
 
@@ -174,20 +177,31 @@ class RestCreateUserExtension extends SimpleExtension
         $app['myextension.config'] = $app->share(function ($app) {
             return $this->getConfig();
         });
+        // $this->extendRepositoryMapping();
     }
 
     /**
      * {@inheritdoc}
+     */
+    // protected function registerRepositoryMappings()
+    // {
+    //     return [
+    //         'users' => [Entity\Users::class => Repository\Users::class],
+    //     ];
+    // }
+
+    /**
+     * {@inheritdoc}
      *
-     * Mount the ExampleController class to all routes that match '/example/url/*'
+     * Mount the UserController class to all routes that match '/example/url/*'
      *
      * To see specific bindings between route and controller method see 'connect()'
-     * function in the ExampleController class.
+     * function in the UserController class.
      */
     protected function registerFrontendControllers()
     {
         return [
-            '/example/url' => new ExampleController(),
+            '/rest/user' => new UserController(),
         ];
     }
 

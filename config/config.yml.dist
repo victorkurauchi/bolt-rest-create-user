@@ -9,3 +9,6 @@ baz: foo bar
 example:
   foo: 3
   bar: baz
+
+debug: true
+debug_show_loggedoff: true
