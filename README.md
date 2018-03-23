@@ -1,5 +1,3 @@
-Extended Bolt Extension Starter
-======================
 
 An extended starter skeleton for a Bolt Extension
 
@@ -61,3 +59,6 @@ You are not limited to just backend sites or sites served by Bolt. You can add a
 ----
 
 For more information, see this page in the Bolt documentation: https://docs.bolt.cm/extensions/config 
+=======
+# bolt-rest-create-user
+Create users in Bolt CMS through API.
