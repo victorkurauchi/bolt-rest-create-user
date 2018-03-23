@@ -1,6 +1,6 @@
 {
     "name": "ornito/rest-create-users",
-    "version": "0.0.1",
+    "version": "1.0",
     "description": "Create users in Bolt CMS through API.",
     "type": "bolt-extension",
     "keywords": [
