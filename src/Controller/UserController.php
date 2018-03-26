@@ -93,7 +93,17 @@ class UserController extends Base
                 $founder['nome'] = $request->get('nome');
                 $founder['slug'] = $request->get('nome');
                 $founder['senha'] = $request->get('password');
-
+                $founder['foto'] = $request->get('foto');
+                $founder['cpf'] = $request->get('cpf');
+                $founder['curso'] = $request->get('curso');
+                $founder['departamento'] = $request->get('departamento');
+                $founder['empreendedor'] = $request->get('empreendedor');
+                $founder['instituto'] = $request->get('instituto');
+                $founder['ocupacao'] = $request->get('ocupacao');
+                $founder['registro_academico'] = $request->get('registro_academico');
+                $founder['sobrenome'] = $request->get('sobrenome');
+                $founder['telefone'] = $request->get('telefone');
+    
                 $resultFounder = $repo->save($founder);
             }
             $response = new JsonResponse($resultFounder, Response::HTTP_OK);
