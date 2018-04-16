@@ -64,6 +64,7 @@ class UserController extends Base
         $user['username'] = $request->get('username');
         $user['password'] = $request->get('password');
         $user['roles'] = ['guest'];
+        $user['enabled'] = true;
 
         try {
             $result = $this->app['users']->saveUser($user);
