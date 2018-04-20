@@ -1,6 +1,6 @@
 {
   "name": "bolt/rest-create-users",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "dist": {
     "type": "composer",
     "url": "https://github.com/victorkurauchi/bolt-rest-create-user"
