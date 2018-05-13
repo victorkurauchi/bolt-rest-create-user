@@ -93,7 +93,7 @@ class UserController extends Base
                 $founder['email'] = $request->get('email');
                 $founder['nome'] = $request->get('nome');
                 $founder['slug'] = $request->get('nome');
-                $founder['senha'] = $request->get('password');
+                $founder['senha'] = $newestUser['password'];
                 $founder['foto'] = $request->get('foto');
                 $founder['cpf'] = $request->get('cpf');
                 $founder['curso'] = $request->get('curso');
